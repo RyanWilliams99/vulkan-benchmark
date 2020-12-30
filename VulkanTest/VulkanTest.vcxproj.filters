@@ -13,8 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Shaders">
-      <UniqueIdentifier>{f460eb6a-5c32-4b65-a228-452ab6a42f65}</UniqueIdentifier>
+    <Filter Include="Source Files\shaders">
+      <UniqueIdentifier>{6f816a95-fdb7-465e-9c2e-9c04692f2f06}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -23,14 +23,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="compile.bat">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="shaders\compile.bat">
+      <Filter>Source Files\shaders</Filter>
     </None>
-    <None Include="shader.vert">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="shaders\frag.spv">
+      <Filter>Source Files\shaders</Filter>
     </None>
-    <None Include="shader.frag">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="shaders\shader.frag">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\shader.vert">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\vert.spv">
+      <Filter>Source Files\shaders</Filter>
     </None>
   </ItemGroup>
 </Project>
