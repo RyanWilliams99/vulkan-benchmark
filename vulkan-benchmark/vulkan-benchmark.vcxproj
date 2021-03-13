@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{872f9757-4a43-4a31-86eb-5b95bea1f216}</ProjectGuid>
-    <RootNamespace>VulkanTest</RootNamespace>
+    <RootNamespace>vulkan-benchmark</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
