@@ -32,8 +32,8 @@ const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
 
 
-const std::string MODEL_PATH = "models/viking-room.obj";
-const std::string TEXTURE_PATH = "textures/viking-room.png";
+const std::string MODEL_PATH = "models/mug.obj";
+const std::string TEXTURE_PATH = "textures/default.png";
 
 const int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -1325,7 +1325,7 @@ private:
             }
         }
     }
-
+    
     void updateUniformBuffer(uint32_t currentImage) {
         static auto startTime = std::chrono::high_resolution_clock::now();
 
@@ -1334,7 +1334,7 @@ private:
 
         UniformBufferObject ubo{};
         ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-        ubo.view = glm::lookAt(glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        ubo.view = glm::lookAt(glm::vec3(5.0f, 5.0f, 5.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float)swapChainExtent.height, 0.1f, 10.0f);
         ubo.proj[1][1] *= -1;
 
