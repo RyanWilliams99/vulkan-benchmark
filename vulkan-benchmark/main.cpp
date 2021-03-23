@@ -33,7 +33,7 @@ const uint32_t HEIGHT = 600;
 
 
 const std::string MODEL_PATH = "models/monkey.obj";
-const std::string TEXTURE_PATH = "textures/2K.jpg";
+const std::string TEXTURE_PATH = "textures/4K.jpg";
 
 const int MAX_FRAMES_IN_FLIGHT = 2;
 
