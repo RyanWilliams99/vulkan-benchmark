@@ -251,12 +251,8 @@ private:
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
             drawFrame();
-            printf("drawn a frame");
             break;
         }
-
-
-
         vkDeviceWaitIdle(device);
     }
 
