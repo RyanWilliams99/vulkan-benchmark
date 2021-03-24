@@ -32,8 +32,8 @@ const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
 
 
-const std::string MODEL_PATH = "models/monkey.obj";
-const std::string TEXTURE_PATH = "textures/4K.jpg";
+const std::string MODEL_PATH = "models/viking-room.obj";
+const std::string TEXTURE_PATH = "textures/viking-room.png";
 
 const int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -251,7 +251,11 @@ private:
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
             drawFrame();
+            printf("drawn a frame");
+            break;
         }
+
+
 
         vkDeviceWaitIdle(device);
     }
@@ -1620,6 +1624,15 @@ private:
 };
 
 int main() {
+    using std::chrono::high_resolution_clock;
+    using std::chrono::duration_cast;
+    using std::chrono::duration;
+    using std::chrono::milliseconds;
+
+    auto t1 = high_resolution_clock::now();
+
+
+    //Vulkan APP start
     HelloTriangleApplication app;
 
     try {
@@ -1629,6 +1642,22 @@ int main() {
         std::cerr << e.what() << std::endl;
         return EXIT_FAILURE;
     }
+    //Vulkan APP end
+
+
+    auto t2 = high_resolution_clock::now();
+
+    /* Getting number of milliseconds as an integer. */
+    auto ms_int = duration_cast<milliseconds>(t2 - t1);
+
+    /* Getting number of milliseconds as a double. */
+    duration<double, std::milli> ms_double = t2 - t1;
+
+    std::cout << ms_int.count() << "ms\n";
+    std::cout << ms_double.count() << "ms";
+    return 0;
 
     return EXIT_SUCCESS;
+
+    
 }
