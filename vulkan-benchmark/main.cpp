@@ -259,7 +259,7 @@ private:
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
             drawFrame();
-            break;
+            ///break;
         }
         vkDeviceWaitIdle(device);
     }
@@ -496,7 +496,13 @@ private:
         SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice);
 
         VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
-        VkPresentModeKHR presentMode = chooseSwapPresentMode(swapChainSupport.presentModes);
+
+
+        //VkPresentModeKHR presentMode = chooseSwapPresentMode(swapChainSupport.presentModes);
+
+        VkPresentModeKHR presentMode = VK_PRESENT_MODE_FIFO_KHR;
+
+
         VkExtent2D extent = chooseSwapExtent(swapChainSupport.capabilities);
 
         uint32_t imageCount = swapChainSupport.capabilities.minImageCount + 1;
