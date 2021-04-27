@@ -259,7 +259,7 @@ private:
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
             drawFrame();
-            break;
+            //break;
         }
         vkDeviceWaitIdle(device);
     }
